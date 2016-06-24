@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Example</title>
+  </head>
+
+  <body ng-app="testApp">
+    <div ng-controller="TestCtrl">
+      <ul>
+        <li ng-repeat="emp in emps">
+          {{emp.firstName}} {{emp.lastName}}
+		  <span ng-hide="emp.onBench">[yes]</span>
+        </li>
+      </ul>
+    </div>
+    
+    <a href="Specs.html">Specs</a>
+    
+    <script src="https://code.angularjs.org/1.5.6/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/TestCtrl.js"></script>
+  </body>
+
+</html>

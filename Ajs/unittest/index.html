@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Example</title>
+  </head>
+
+  <body ng-app="testApp">
+    <div ng-controller="TestCtrl">
+      <div>
+        <input type="text" ng-model="a">
+        <input type="text" ng-model="b">
+      </div>
+      <div>
+        <button ng-click="add(a, b)">Add</button>
+      </div>
+      <div>
+        <span>{{sum}}</span>
+      </div>
+    </div>
+    
+    <a href="Specs.html">Specs</a>
+    
+    <script src="https://code.angularjs.org/1.5.6/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/TestCtrl.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,16 @@
+(function() {
+  'use strict';
+  
+  var testApp = angular.module('testApp', []);
+  
+  testApp.controller('TestCtrl',TestCtrl)
+  
+  function TestCtrl($http,$scope) {
+    $scope.add = function(a, b) {
+      a = parseInt(a, 10);
+      b = parseInt(b, 10);
+      $scope.sum = a + b;
+    };
+  }
+  
+}());

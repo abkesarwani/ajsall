@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Example</title>
+  </head>
+
+  <body ng-app="testApp">
+    <div ng-controller="TestCtrl">
+      <input type="checkbox" ng-model="applyHeader">
+      <table>
+        <thead ng-class="{'header': applyHeader}">
+          <tr>
+            <th ng-click="sort('id')">Id</th>
+            <th ng-click="sort('firstName')">First Name</th>
+            <th ng-click="sort('lastName')">Last Name</th>
+            <th ng-click="sort('doj')">DOJ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="emp in emps | orderBy : onCol" ng-class-even="'even'" ng-class-odd="'odd'">
+            <td>{{emp.id}}</td>
+            <td>{{emp.firstName}}</td>
+            <td>{{emp.lastName}}</td>
+            <td>{{emp.doj | date : 'yyyy-MM-dd'}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <script src="https://code.angularjs.org/1.5.6/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/TestCtrl.js"></script>
+  </body>
+
+</html>

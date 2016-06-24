@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+  <script data-require="angular.js@1.5.6" data-semver="1.5.6" src="https://code.angularjs.org/1.5.6/angular.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body ng-app="myApp">
+  <div ng-controller="Controller">
+    Using Element:
+    <one></one>
+    <hr /> Using Attribute:
+    <div one></div>
+    <hr /> Using Class:
+    <div class="one"></div>
+    <hr /> Using Comments:
+    <!-- directive: one -->
+    <hr />
+  </div>
+</body>
+
+</html>

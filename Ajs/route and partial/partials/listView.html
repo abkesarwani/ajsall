@@ -1,0 +1,22 @@
+<input type="checkbox" ng-model="someBooleanValue">
+    <table>
+      <caption><input type="text" ng-model="searchOn"></caption>
+      <thead ng-class="{'header': true}">
+        <tr>
+          <th ng-click="onCol = 'id'">Id</th>
+          <th ng-click="onCol = 'firstName'">First Name</th>
+          <th ng-click="onCol = 'lastName'">Last Name</th>
+          <th ng-click="onCol = 'doj'">DOJ</th>
+          <th ng-click="onCol = 'onBench'">Bench</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="emp in emps | orderBy : onCol | filter : searchOn" ng-class-even="'even'" ng-class-odd="'odd'">
+          <td>{{emp.id}}</td>
+          <td>{{emp.firstName}}</td>
+          <td>{{emp.lastName}}</td>
+          <td>{{emp.doj | date : 'yyyy-MM-dd'}}</td>
+          <td>{{emp.onBench | YesNo : someBooleanValue }}</td>
+        </tr>
+      </tbody>
+    </table>

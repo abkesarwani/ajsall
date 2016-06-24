@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Example</title>
+</head>
+
+<body ng-app="testApp">
+  <div ng-view></div>
+  
+  <script src="https://code.angularjs.org/1.5.6/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.5.6/angular-route.js"></script>
+  
+  <script>
+    var emps = [
+      {id: 1, firstName: 'Ashish', lastName: 'Kumar', doj: new Date('20 Feb 2006'), onBench: true},
+      {id: 2, firstName: 'Parma', lastName: 'Dhuri', doj: new Date('4 Apr 2016'), onBench: false},
+      {id: 3, firstName: 'Kedar', lastName: 'Naik', doj: new Date('1 Jan 2015'), onBench: true},
+      {id: 4, firstName: 'Rahul', lastName: 'Pandey', doj: new Date('14 May 2014'), onBench: false},
+      {id: 5, firstName: 'Kundan', lastName: 'Shinde', doj: new Date('8 June 2016'), onBench: true}
+    ];
+  </script>
+  <script src="js/app.js"></script>
+  <script src="js/filters/YesNoFilter.js"></script>
+  <script src="js/controllers/EmpListCtrl.js"></script>
+  <script src="js/controllers/EmpDetailsCtrl.js"></script>
+</body>
+
+</html>
